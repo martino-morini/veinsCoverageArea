@@ -44,7 +44,7 @@ If you need to change the number of BSTs in the scenario you need to modify the 
 	* Note that PIL_COLOR need to be a color defined in the python PIL library:
 
 ```python
-PIL_COLOR					   : RGB_CODE
+PIL_COLOR				 : RGB_CODE
 aliceblue                      : #f0f8ff
 antiquewhite                   : #faebd7
 aqua                           : #00ffff
