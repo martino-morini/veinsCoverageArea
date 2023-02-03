@@ -15,6 +15,7 @@ Once you installed all the programs, compile the c++ code, to do that, on a term
 In a terminal, from the _/veinsCoverageArea_ directory, launch _./sumo-launchd,py -c sumo-gui_
 ### Start the Simulation
 In a terminal, from the _/veinsCoverageArea/examples/veins_ directory, launch _chmod +x run_ (only the first time) and than _./run -u Cmdenv -c WithBeaconing -r 0_
+
 If all gone well, a Sumo Window should opens and the simulation should start. you can pause it, slow it down, and change grafical parameters like every sumo simulation (i suggest you to exagerate the dimension of cars to see them better)
 When the simulation ends, the window close itself automaticaly.
 ### Create the Coverage Area Image
