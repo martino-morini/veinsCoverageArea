@@ -31,7 +31,7 @@ Define_Module(veins::TraCIDemoRSU11p);
 void TraCIDemoRSU11p::initialize(int stage)
 {
     /*
-     * When a BST is created starts to send messages after 1 second
+     * When a BTS is created starts to send messages after 1 second
      */
     DemoBaseApplLayer::initialize(stage);
     if (stage == 0) {

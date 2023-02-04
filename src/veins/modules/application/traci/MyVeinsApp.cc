@@ -36,7 +36,7 @@ void MyVeinsApp::initialize(int stage)
     if (stage == 0) {
         /*
          * When a car is created, loads the color from the colors.csv file.
-         * With this approach the car can change different colors during the simulation due to what BST generated the received message
+         * With this approach the car can change different colors during the simulation due to what BTS generated the received message
          * Please note that this code creates an istance of colors for every car, this could be more efficient if the colors attribute would be declared static,
          *  but when a static attribute is called veins crashed to me.
          *  I tried so hard to fix that without success and in the end I choose this less efficient but running version.
@@ -52,9 +52,9 @@ void MyVeinsApp::initialize(int stage)
                 std::stringstream ss(line);
                 std::vector<std::string> v; // it's the inner vector. It rappresents a generic line of the .csv file
                 while(ss.good()){
-                    std::string substr;
-                    std::getline(ss, substr, ';');
-                    v.push_back(substr);
+                    std::string suBTSr;
+                    std::getline(ss, suBTSr, ';');
+                    v.push_back(suBTSr);
                 }
                 colors.push_back(v);
             }
@@ -78,7 +78,7 @@ void MyVeinsApp::onWSM(BaseFrame1609_4* wsm)
 {
     TraCIDemo11pMessage* msg = check_and_cast<TraCIDemo11pMessage*>(wsm);
     /*
-     * When a car receive a data message, probably it's from a base station, if the data is equal to an id of the BSTs saved on the colors.csv file,
+     * When a car receive a data message, probably it's from a base station, if the data is equal to an id of the BTSs saved on the colors.csv file,
      * the car change its color and save its position on the right file.
      */
     std::ofstream posFile;
@@ -89,7 +89,7 @@ void MyVeinsApp::onWSM(BaseFrame1609_4* wsm)
         v = colors[i];
         if (data == v[0]){
             traciVehicle ->setColor(TraCIColor(stoi(v[1]), stoi(v[2]), stoi(v[3]), 255));
-            posFile.open("BST_" + v[0] + ".csv", std::ios_base::app);
+            posFile.open("BTS_" + v[0] + ".csv", std::ios_base::app);
             posFile << mobility->getPositionAt(simTime()).x << ";" << mobility->getPositionAt(simTime()).y << std::endl;
             posFile.close();
             scheduleAt(simTime() + 1, new TraCIDemo11pMessage("ComeBackYellow", 14)); // schedule at 1 second after to change back color to yellow
