@@ -1,6 +1,8 @@
 ﻿# STUDY OF mm WAVE COVERAGE AREA IN VEHICULAR NETWORK
 This repository contains the demo of a study of mmWave coverage in a vehicular network in a part of London.
 This is the project for the "Next Generation Networks" course held by professor Michele Segata in the Università degli Studi di Trento, Italy.
+![example](/coverageAreaExample.png)
+
 ## How to run the demo
 ### Premise
 The demo was developed on a ubuntu machine, it should work well on macOS too, windows is not guaranteed. 
