@@ -3,7 +3,7 @@
 ## Start demo simulation
 * start the sumo/veins server:
 	* cd in main veins/ directory
-	* ./sumo_launchd.py -c sumo-gui
+	* python3 sumo_launchd.py -c sumo-gui
 * compile src veins code:
 	* cd in main veins/ directory
 	* ./configure (only first time)
