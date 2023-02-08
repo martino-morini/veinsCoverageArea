@@ -12,7 +12,7 @@ The demo was developed on a ubuntu machine, it should work well on macOS too, wi
 ### Compile the code
 Once you installed all the programs, compile the c++ code, to do that, on a terminal, in the _/veinsCoverageArea_ directory launch _./configure_ and than _make_
 ### Start the Veins server to work with Sumo
-In a terminal, from the _/veinsCoverageArea_ directory, launch _python3 sumo-launchd,py -c sumo-gui_
+In a terminal, from the _/veinsCoverageArea_ directory, launch _python3 sumo-launchd.py -c sumo-gui_
 ### Start the Simulation
 In a terminal, from the _/veinsCoverageArea/examples/veins_ directory, launch _chmod +x run_ (only the first time) and than _./run -u Cmdenv -c WithBeaconing -r 0_
 
