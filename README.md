@@ -20,27 +20,27 @@ If all gone well, a Sumo Window should opens and the simulation should start. yo
 When the simulation ends, the window close itself automaticaly.
 ### Create the Coverage Area Image
 In a terminal, from the _/veinsCoverageArea/examples/veins_ directory,  launch _python plotter.py_.
-You should find the _coverageArea.png_ image with the covered points plotted as colored points and BSTs position as colored crosses
+You should find the _coverageArea.png_ image with the covered points plotted as colored points and BTSs position as colored crosses
 ### Please note: 
 * In some machines you need to specify to use python 3, calling _python3_ instead of _python_
 * To guaranteed the success of every script or launcher you need to launch them in their own directory
 * The _coverageArea.png_ image is overriden at every _plotter.py_ run, so if you need to save it for any cases, change its name or its position before launch a new run
-* The files where the x-y coordinates of the covered points are saved (BST_x.csv) are overriden at every simulation run, so if you need to save it for any cases, change its name or its position before launch a new run
+* The files where the x-y coordinates of the covered points are saved (BTS_x.csv) are overriden at every simulation run, so if you need to save it for any cases, change its name or its position before launch a new run
 ## How to change any parameter of the scenario
 ### Same map
 #### Vehicular parameters
 If you need to modify the vehicular parameters, like frequency of spawn of the cars, trips and roads compute by the cars, you need to launch the sumo scripts created for that reasons. More information on the web or in the _notes.md_ conteined in this repository. 
 In this demo the simulation last 200 seconds, and a car si spawned every 3 seconds. 
 #### Omnet++ Parameters
-If you need to change any omnet++ parameters, like the simulation time duration or position of the BSTs, just open the _/veinsCoverageArea/example/veins/omnetpp.ini_ file with a text editor, modify and save it. 
-#### Number of BSTs 
-If you need to change the number of BSTs in the scenario you need to modify the network, so:
+If you need to change any omnet++ parameters, like the simulation time duration or position of the BTSs, just open the _/veinsCoverageArea/example/veins/omnetpp.ini_ file with a text editor, modify and save it. 
+#### Number of BTSs 
+If you need to change the number of BTSs in the scenario you need to modify the network, so:
 * Open with a text editor the _/veinsCoverageArea/example/veins/RSUExampleScenario.ned_ 
-* Change the number of BSTs in the scenario (in the submodules, rsu[x] stands for x BSTs in the scenario)
-* make sure to have enough colors saved in _/veinsCoverageArea/example/veins/colors.csv_ file (at least one for every BST)
+* Change the number of BTSs in the scenario (in the submodules, rsu[x] stands for x BTSs in the scenario)
+* make sure to have enough colors saved in _/veinsCoverageArea/example/veins/colors.csv_ file (at least one for every BTS)
 * If you need to add or modify colors here is a scheme:
-	* BST_ID;RED;GREEN;BLUE;PIL_COLOR
-	* BST_ID must be equal to the id in omnet++ simulation (0, 1, 2, ...)
+	* BTS_ID;RED;GREEN;BLUE;PIL_COLOR
+	* BTS_ID must be equal to the id in omnet++ simulation (0, 1, 2, ...)
 	* Note that PIL_COLOR need to be a color defined in the python PIL library:
 
 ```python
@@ -195,7 +195,7 @@ yellow                         : #ffff00
 yellowgreen                    : #9acd32
 ```
 ### Different map
-If you want to change map, so you want to change completly scenario you need to create new config files for the veins simulation starting from the .osm (Open Street Map) file which conteins info about streets, obstacles etc. More information on the web or in the _notes.md_ conteined in this repository. 
+If you want to change map, so you want to change completly scenario you need to create new config files for the veins simulation starting from the .osm (Open Street Map) file which conteins info about streets, oBTSacles etc. More information on the web or in the _notes.md_ conteined in this repository. 
 
 If you change the map obviosly the plotter script won't work anymore, briefly, here what you have to update it:
 * Find a new background image, make sure that its streets are perfectly overlayable to the net used by the simulation. Do to that you can use programs like Adobe Photoshop and a screenshot of the network (you can get it by launch _netedid _x_.net.xml_) or use the screenshot itself as the background
