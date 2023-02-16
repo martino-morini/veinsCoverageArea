@@ -18,11 +18,16 @@ The demo was developed on a Ubuntu machine but it should also work on macOS (on 
 * omnet++ simulator installed
 * this repository itself
 ### Compile the code
-Once you installed all the programs, compile the c++ code: to do that, on a terminal, in the _/veinsCoverageArea_ directory launch _./configure_ and than _make_
+Once you installed all the programs, compile the c++ code: to do that, on a terminal, in the _/veinsCoverageArea_ directory launch:
+* _chmod +x configure_ (only first time)
+* _./configure_ (only first time)
+* _make_
 ### Start the Veins server to work with Sumo
 In a terminal, from the _/veinsCoverageArea_ directory, launch _python3 sumo-launchd.py -c sumo-gui_
 ### Start the Simulation
-In a **new** terminal tab, from the _/veinsCoverageArea/examples/veins_ directory, launch _chmod +x run_ (only for the first time), than _./run -u Cmdenv -c WithBeaconing -r 0_
+In a **new** terminal tab, from the _/veinsCoverageArea/examples/veins_ directory, launch:
+* _chmod +x run_ (only for the first time)
+* _./run -u Cmdenv -c WithBeaconing -r 0_
 
 If everything works, a Sumo window should opens and the simulation should start. You can pause it, slow it down, and change graphical parameters, like every other Sumo simulation (we suggest you to exagerate the size of cars to see them better).
 When the simulation ends, the window closes itself automatically.
